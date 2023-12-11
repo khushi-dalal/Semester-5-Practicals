@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+
+        input {
+            width: 80px;
+            padding: 5px;
+            text-align: center;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        #result {
+            margin-top: 20px;
+            background-color: #779dc5;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Simple Calculator</h1>
+
+   <label for="num1">Number 1: </label>
+   <input type="text" id="num1" placeholder="number 1">
+   <label for="num2">Number 2: </label>
+   <input type="text" id="num2" placeholder="number 2">
+   <div>
+    <button onclick="calculator()">Calculate</button>
+   </div>
+   <div id="result"></div>
+   <script>
+      function calculator() {
+        var num1 = parseFloat(document.getElementById('num1').value); 
+        var num2 = parseFloat(document.getElementById('num2').value); 
+        var sum = num1 + num2;
+        var difference = num1 - num2;
+        var product = num1 * num2;
+        var division = num1 / num2;
+        var resulttext = 'Sum: ' + sum + '<br>' +
+                        'Difference: ' + difference + '<br>' +
+                        'Product: ' + product + '<br>' +
+                        'Division: ' + division + '<br>'
+        document.getElementById('result').innerHTML = resulttext
+    }
+   </script>
+</body>
+</html>

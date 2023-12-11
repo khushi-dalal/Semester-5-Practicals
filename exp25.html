@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Styles</title>
+
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        h1 {
+            color: #007bff;
+        }
+
+        p {
+            line-height: 1.5;
+        }
+
+        .navbar {
+            background-color: #007bff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .navbar a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        .content-img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 40px;
+                background-color: #e0e0e0;
+            }
+
+            h1 {
+                color: #ff6600;
+            }
+
+            p {
+                font-size: 14px;
+            }
+
+            .navbar {
+                background-color: #ff6600;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="navbar">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+    </div>
+
+    <h1>Welcome to My Website</h1>
+
+    <img src="your-image1.jpg" alt="Sample Image 1" class="content-img">
+
+    <p>This is some content on the webpage. It includes a heading, an image, and a paragraph of text.</p>
+
+    <p>Here's more text to add substance to the content. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed hendrerit nec orci sit amet cursus. Quisque non fermentum est. Fusce elementum, nulla vitae cursus sodales, ex nibh gravida justo, vel sollicitudin odio turpis vel justo.</p>
+
+    <img src="your-image2.jpg" alt="Sample Image 2" class="content-img">
+
+    <p>Another paragraph of text. Ut fermentum dui non elit ullamcorper, eu tincidunt odio rhoncus. Integer ac risus ac augue ultricies venenatis. Vivamus auctor leo ut tellus efficitur ullamcorper. Suspendisse potenti. Sed vel pharetra elit.</p>
+
+</body>
+</html>

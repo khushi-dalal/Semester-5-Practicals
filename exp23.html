@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Scale Transition</title>
+
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .image-container {
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .scale-transition {
+            display: block;
+            width: 100%;
+            height: auto;
+            transition: transform 1s ease;
+        }
+
+        .enlarged {
+            transform: scale(1.5);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="image-container" onclick="toggleEnlarged()">
+        <img class="scale-transition" src="/Exp4/lion.jpg" alt="Scale Image">
+    </div>
+
+    <script>
+        function toggleEnlarged() {
+            var image = document.querySelector('.scale-transition');
+            image.classList.toggle('enlarged');
+        }
+    </script>
+
+</body>
+</html>

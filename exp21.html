@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Two-Column Layout</title>
+
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        main {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            border-radius: 12px;
+            overflow: hidden; /* Clear the float */
+        }
+
+        .column {
+            float: left;
+            width: 48%; /* Adjust the width as needed */
+            margin-right: 2%;
+            box-sizing: border-box; 
+            /*Include padding and border in width calculation */
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #fff;
+            transition: box-shadow 0.3s ease;
+        }
+
+        .column:last-child {
+            margin-right: 0;
+        }
+
+        .column:hover {
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+        } 
+
+        @media (max-width: 768px) {
+            .column {
+                width: 100%;
+                margin-right: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <main>
+        <div class="column">
+            <h2>Column 1</h2>
+            <p>This is the content of column 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac turpis vel elit varius euismod a ac turpis.</p>
+        </div>
+
+        <div class="column">
+            <h2>Column 2</h2>
+            <p>This is the content of column 2. Ut fermentum dui non elit ullamcorper, eu tincidunt odio rhoncus. Integer ac risus ac augue ultricies venenatis.</p>
+        </div>
+    </main>
+
+</body>
+</html>

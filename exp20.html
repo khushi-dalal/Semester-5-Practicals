@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form with Validation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+
+        form {
+            width: 300px;
+            margin: 0 auto;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .error-message {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Login Form</h1>
+
+    <form id="loginForm" onsubmit="validateForm(); return false;">
+        <label for="username">Username:</label>
+        <input type="text" id="username" placeholder="Enter your username">
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" placeholder="Enter your password">
+
+        <button type="submit">Login</button>
+    </form>
+
+    <div id="errorMessages" class="error-message"></div>
+
+    <script>
+        function validateForm() {
+            // Get form elements
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+            var errorMessages = document.getElementById('errorMessages');
+
+            // Reset error messages
+            errorMessages.innerHTML = '';
+
+            // Check if username is empty
+            if (username.trim() === '') {
+                errorMessages.innerHTML = 'Username is required.';
+                return;
+            }
+
+            // Check if username contains "@"
+            if (!username.includes('@')) {
+                errorMessages.innerHTML = 'Username must contain "@" symbol.';
+                return;
+            }
+
+            // Check if password is empty
+            if (password.trim() === '') {
+                errorMessages.innerHTML = 'Password is required.';
+                return;
+            }
+
+            // Check if password has a minimum length of 8 characters
+            if (password.length < 8) {
+                errorMessages.innerHTML = 'Password must be at least 8 characters long.';
+                return;
+            }
+
+            // Check if password contains at least one numeric character
+            if (!/\d/.test(password)) {
+                errorMessages.innerHTML = 'Password must contain at least one numeric character.';
+                return;
+            }
+
+            // If all validation passes, display success message
+            alert('Login successful!');
+        }
+    </script>
+
+</body>
+</html>
